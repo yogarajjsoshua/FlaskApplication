@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from huggingface_hub import login
+from huggingface import login
 from pydantic import BaseModel
+import os 
 
 load_dotenv()
 login(token=os.getenv("HF_TOKEN"))
@@ -26,4 +27,3 @@ def get_users(id: int):
     return {"message": "Users fetched successfully", "id": id}
 
 
-#adding Comments to check
