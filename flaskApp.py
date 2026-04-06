@@ -24,3 +24,6 @@ def create_user(user: users):
 @app.get("/users/{id}")
 def get_users(id: int):
     return {"message": "Users fetched successfully", "id": id}
+
+
+#adding Comments to check
